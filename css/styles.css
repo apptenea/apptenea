@@ -845,13 +845,17 @@ h2 span {
 .app-badge.motivappte {
   padding: 0;
   overflow: hidden;
+  width: 58px;
+  height: 58px;
+  flex-shrink: 0;
 }
 
 .app-badge-logo {
-  width: 100%;
-  height: 100%;
+  width: 58px;
+  height: 58px;
   object-fit: cover;
   display: block;
+  flex-shrink: 0;
 }
 
 
