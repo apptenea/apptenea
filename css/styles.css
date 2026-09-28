@@ -715,6 +715,34 @@ h2 span {
 
 
 /* =========================
+   SOCIAL ICONS (NAVBAR)
+========================= */
+
+.nav-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  color: var(--muted);
+
+  transition:
+    color 0.2s ease,
+    background 0.2s ease;
+}
+
+
+.nav-social:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.07);
+}
+
+
+/* =========================
    APPLICATIONS
 ========================= */
 
@@ -809,6 +837,83 @@ h2 span {
 
 .app-link:hover span {
   transform: translateX(5px);
+}
+
+
+/* Logo image inside app badge */
+
+.app-badge.motivappte {
+  padding: 0;
+  overflow: hidden;
+}
+
+.app-badge-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+
+/* Live status dot */
+
+.live-dot {
+  display: inline-block;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #23e7a4;
+
+  box-shadow: 0 0 8px #23e7a4;
+
+  margin-right: 5px;
+
+  vertical-align: middle;
+}
+
+
+/* Games badge variants */
+
+.badge-faro {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 180, 50, 0.25),
+      rgba(255, 120, 0, 0.18)
+    );
+  color: #ffb432;
+}
+
+
+.badge-ecos {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(160, 80, 255, 0.25),
+      rgba(100, 40, 200, 0.18)
+    );
+  color: #b87aff;
+}
+
+
+.badge-gods {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 215, 0, 0.25),
+      rgba(200, 150, 0, 0.18)
+    );
+  color: #ffd700;
+}
+
+
+/* Games section grid (3 columns) */
+
+.games-grid {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 
@@ -1193,7 +1298,8 @@ h2 span {
 
 
   .feature-grid,
-  .apps-grid {
+  .apps-grid,
+  .games-grid {
     grid-template-columns: 1fr;
   }
 
