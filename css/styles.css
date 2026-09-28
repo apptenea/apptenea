@@ -1394,37 +1394,55 @@ h2 span {
 ========================= */
 
 .ribbon-section {
-  padding: 48px 0 40px;
+  padding: 56px 0 52px;
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
+}
+
+.ribbon-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.ribbon-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: var(--cyan);
 }
 
 .ribbon-tabs {
   display: flex;
-  gap: 8px;
-  margin-bottom: 28px;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px;
 }
 
 .ribbon-tab {
-  padding: 8px 22px;
+  padding: 8px 26px;
   border-radius: 999px;
-  border: 1px solid var(--line);
+  border: none;
   background: transparent;
   color: var(--muted);
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 
 .ribbon-tab:hover {
-  color: var(--light);
-  border-color: rgba(0, 217, 255, 0.3);
+  color: var(--text);
 }
 
 .ribbon-tab.active {
-  background: rgba(0, 217, 255, 0.12);
-  border-color: var(--cyan);
+  background: rgba(0, 217, 255, 0.15);
   color: var(--cyan);
 }
 
@@ -1438,106 +1456,89 @@ h2 span {
 
 .ribbon-track {
   display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding-bottom: 8px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 217, 255, 0.2) transparent;
-}
-
-.ribbon-track::-webkit-scrollbar {
-  height: 4px;
-}
-
-.ribbon-track::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-.ribbon-track::-webkit-scrollbar-thumb {
-  background: rgba(0, 217, 255, 0.2);
-  border-radius: 4px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .ribbon-card {
-  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  padding: 20px 24px;
+  gap: 12px;
+  padding: 24px 28px 20px;
   border: 1px solid var(--line);
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.025);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
   text-decoration: none;
   color: inherit;
-  cursor: pointer;
-  transition: transform 0.2s, border-color 0.2s, background 0.2s;
-  min-width: 130px;
+  width: 155px;
+  transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease;
 }
 
 a.ribbon-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(0, 217, 255, 0.35);
+  transform: translateY(-6px);
+  border-color: rgba(0, 217, 255, 0.4);
   background: rgba(0, 217, 255, 0.06);
 }
 
 .ribbon-card--inactive {
-  opacity: 0.6;
+  opacity: 0.55;
   cursor: default;
 }
 
-.ribbon-badge {
-  width: 52px;
-  height: 52px;
-  border-radius: 14px;
+.ribbon-icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 18px;
   display: grid;
   place-items: center;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 900;
   background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(22, 119, 255, 0.15));
   color: var(--cyan);
   overflow: hidden;
   flex-shrink: 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.ribbon-badge-img {
-  width: 52px;
-  height: 52px;
+.ribbon-icon-img {
+  width: 68px;
+  height: 68px;
   object-fit: cover;
   display: block;
 }
 
 .ribbon-name {
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  color: var(--light);
+  color: var(--text);
   text-align: center;
-  white-space: nowrap;
 }
 
-.ribbon-status {
-  font-size: 0.6rem;
+.ribbon-pill {
+  font-size: 0.58rem;
   font-weight: 800;
   letter-spacing: 0.1em;
-  padding: 3px 8px;
+  padding: 4px 9px;
   border-radius: 999px;
   white-space: nowrap;
 }
 
-.status-live-pill {
-  background: rgba(0, 217, 100, 0.15);
-  color: #00d964;
-  border: 1px solid rgba(0, 217, 100, 0.3);
+.pill-live {
+  background: rgba(0, 217, 100, 0.14);
+  color: #00d96a;
+  border: 1px solid rgba(0, 217, 100, 0.28);
 }
 
-.status-dev-pill {
-  background: rgba(255, 165, 0, 0.12);
+.pill-dev {
+  background: rgba(255, 165, 0, 0.11);
   color: #ffaa33;
-  border: 1px solid rgba(255, 165, 0, 0.25);
+  border: 1px solid rgba(255, 165, 0, 0.22);
 }
 
-.status-soon-pill {
-  background: rgba(150, 150, 170, 0.1);
-  color: #8899aa;
-  border: 1px solid rgba(150, 150, 170, 0.2);
+.pill-soon {
+  background: rgba(140, 155, 175, 0.1);
+  color: #8a9bb0;
+  border: 1px solid rgba(140, 155, 175, 0.18);
 }
