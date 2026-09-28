@@ -753,7 +753,7 @@ h2 span {
 
 
 .app-card {
-  min-height: 300px;
+  min-height: 360px;
 
   display: flex;
   flex-direction: column;
@@ -770,6 +770,8 @@ h2 span {
 
 .app-card p {
   flex: 1;
+  font-size: 0.875rem;
+  line-height: 1.6;
   margin-bottom: 16px;
 }
 
