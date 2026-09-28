@@ -1387,3 +1387,157 @@ h2 span {
     min-height: 330px;
   }
 }
+
+
+/* =========================
+   RIBBON
+========================= */
+
+.ribbon-section {
+  padding: 48px 0 40px;
+  border-bottom: 1px solid var(--line);
+}
+
+.ribbon-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 28px;
+}
+
+.ribbon-tab {
+  padding: 8px 22px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.ribbon-tab:hover {
+  color: var(--light);
+  border-color: rgba(0, 217, 255, 0.3);
+}
+
+.ribbon-tab.active {
+  background: rgba(0, 217, 255, 0.12);
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.ribbon-panel {
+  display: none;
+}
+
+.ribbon-panel.active {
+  display: block;
+}
+
+.ribbon-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 217, 255, 0.2) transparent;
+}
+
+.ribbon-track::-webkit-scrollbar {
+  height: 4px;
+}
+
+.ribbon-track::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ribbon-track::-webkit-scrollbar-thumb {
+  background: rgba(0, 217, 255, 0.2);
+  border-radius: 4px;
+}
+
+.ribbon-card {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.025);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s, background 0.2s;
+  min-width: 130px;
+}
+
+a.ribbon-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(0, 217, 255, 0.35);
+  background: rgba(0, 217, 255, 0.06);
+}
+
+.ribbon-card--inactive {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.ribbon-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, rgba(0, 217, 255, 0.2), rgba(22, 119, 255, 0.15));
+  color: var(--cyan);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.ribbon-badge-img {
+  width: 52px;
+  height: 52px;
+  object-fit: cover;
+  display: block;
+}
+
+.ribbon-name {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--light);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ribbon-status {
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 3px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.status-live-pill {
+  background: rgba(0, 217, 100, 0.15);
+  color: #00d964;
+  border: 1px solid rgba(0, 217, 100, 0.3);
+}
+
+.status-dev-pill {
+  background: rgba(255, 165, 0, 0.12);
+  color: #ffaa33;
+  border: 1px solid rgba(255, 165, 0, 0.25);
+}
+
+.status-soon-pill {
+  background: rgba(150, 150, 170, 0.1);
+  color: #8899aa;
+  border: 1px solid rgba(150, 150, 170, 0.2);
+}
